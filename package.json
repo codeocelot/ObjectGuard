@@ -1,0 +1,19 @@
+{
+  "name": "guard",
+  "version": "0.0.1",
+  "description": "Enforce access to properties",
+  "main": "guard.js",
+  "scripts": {
+		"start":"node --harmony-proxies guard.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "harmonize": "^1.4.4",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "babel": "^6.1.18"
+  }
+}
