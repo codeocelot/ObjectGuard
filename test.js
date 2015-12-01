@@ -42,5 +42,16 @@ describe('non empty obj',()=>{
 
 describe('custom handler',()=>{
 	it('should use new handler',()=>{
+		var target = {prop:'outvalue'};
+		var property = 'prop';
+		var obj = guard({},function(target,property,reciever)	{
+			return target[property] === 'outvalue';	
+		});
+		/* == 'outvalue' */
+		obj.prop = 'outvalue';
+		assert.equal(obj.prop,true);
+		/* != 'outvalue' */
+		obj.prop = 'wellwater';
+		assert.equal(obj.prop,false);
 	})
-})
+});
